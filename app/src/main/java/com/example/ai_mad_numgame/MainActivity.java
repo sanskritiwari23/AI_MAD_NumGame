@@ -97,7 +97,7 @@ public class MainActivity<correctButton, matchCounter> extends AppCompatActivity
         button3.setText(correctAns + 1 + "");
         button4.setText(correctAns + 2 + "");
         }
-        if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
+       {    // if three matches are completed updatee the perfomrance in sharedpreferences
 
             matchCounter=0;
 
@@ -108,7 +108,7 @@ public class MainActivity<correctButton, matchCounter> extends AppCompatActivity
             sharedPreferences.edit().putString("data",new Gson().toJson(performance)).apply();
 
         }
-    }
+
 
     public int sumOfScore(){
         //Computing the sum of score array, which has the 1 or in each index,depending on correct or incorrect answers
