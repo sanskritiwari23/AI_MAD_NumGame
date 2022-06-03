@@ -24,7 +24,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<correctButton, matchCounter> extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     int matchCounter=0;
     int []performance={-1,-1,-1,-1,-1,-1}; //score of a game is updated in this array
@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public void newMatch() {  //A game is composed of three matches
 
         int operand1 = random.nextInt(10);
-        int operand2 = random.nextInt(10);
         int operand2=0;
         //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
         String operator = operators[random.nextInt(4)];
@@ -98,28 +97,6 @@ public class MainActivity extends AppCompatActivity {
         button3.setText(correctAns + 1 + "");
         button4.setText(correctAns + 2 + "");
         }
-        else if(correctButton == 1){
-        int correctAns;
-        button2.setText(correctAns+"");
-            button1.setText(correctAns - 1 + "");
-            button3.setText(correctAns + 1 + "");
-            button4.setText(correctAns + 2 + "");
-        }
-        else if(correctButton == 2){
-        int correctAns;
-        button3.setText(correctAns+"");
-            button2.setText(correctAns - 1 + "");
-            button1.setText(correctAns + 1 + "");
-            button4.setText(correctAns + 2 + "");
-        }
-        else {
-        int correctAns;
-        button4.setText(correctAns+"");
-            button2.setText(correctAns - 1 + "");
-            button3.setText(correctAns + 1 + "");
-            button1.setText(correctAns + 2 + "");
-        }
-
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
             matchCounter=0;
