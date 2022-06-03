@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         textView2.setText(operand1 + operator + operand2);
 
       // Your code here, to diplay correct and incorrect options on the buttons
+        int correctAns;
         if(operator.equals("+")){
             correctAns = operand1 + operand2;
         }
@@ -92,7 +93,10 @@ public class MainActivity extends AppCompatActivity {
             correctAns = operand1 / operand2;
         }
         correctButton = random.nextInt(4);
-
+        button1.setText(correctAns+"");
+        button2.setText(correctAns - 1 + "");
+        button3.setText(correctAns + 1 + "");
+        button4.setText(correctAns + 2 + "");
         }
         else if(correctButton == 1){
             button2.setText(correctAns+"");
