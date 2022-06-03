@@ -99,19 +99,22 @@ public class MainActivity extends AppCompatActivity {
         button4.setText(correctAns + 2 + "");
         }
         else if(correctButton == 1){
-            button2.setText(correctAns+"");
+        int correctAns;
+        button2.setText(correctAns+"");
             button1.setText(correctAns - 1 + "");
             button3.setText(correctAns + 1 + "");
             button4.setText(correctAns + 2 + "");
         }
         else if(correctButton == 2){
-            button3.setText(correctAns+"");
+        int correctAns;
+        button3.setText(correctAns+"");
             button2.setText(correctAns - 1 + "");
             button1.setText(correctAns + 1 + "");
             button4.setText(correctAns + 2 + "");
         }
         else {
-            button4.setText(correctAns+"");
+        int correctAns;
+        button4.setText(correctAns+"");
             button2.setText(correctAns - 1 + "");
             button3.setText(correctAns + 1 + "");
             button1.setText(correctAns + 2 + "");
