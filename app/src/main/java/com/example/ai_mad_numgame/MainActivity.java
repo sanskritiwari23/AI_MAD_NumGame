@@ -92,11 +92,7 @@ public class MainActivity extends AppCompatActivity {
             correctAns = operand1 / operand2;
         }
         correctButton = random.nextInt(4);
-        if(correctButton == 0){
-            button1.setText(correctAns+"");
-            button2.setText(correctAns - 1 + "");
-            button3.setText(correctAns + 1 + "");
-            button4.setText(correctAns + 2 + "");
+
         }
         else if(correctButton == 1){
             button2.setText(correctAns+"");
